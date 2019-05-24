@@ -6,9 +6,11 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 15:02:15 by tchewa            #+#    #+#             */
-/*   Updated: 2019/05/23 13:05:34 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/05/24 11:10:53 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
