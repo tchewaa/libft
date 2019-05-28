@@ -6,12 +6,11 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 13:54:24 by tchewa            #+#    #+#             */
-/*   Updated: 2019/05/27 16:59:56 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/05/28 10:23:02 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -24,16 +23,7 @@ char	*ft_strchr(const char *s, int c)
 		{
 			return ((char *)&s[i]);
 		}
-		i++;	
+		i++;
 	}
 	return (NULL);
-}
-
-int		main(void)
-{
-	char s[100] = "The difference is the same";
-	char c = 'f';
-
-	printf("%s\n", ft_strchr(s,c));
-	return 0;
 }
