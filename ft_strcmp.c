@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:08:29 by tchewa            #+#    #+#             */
-/*   Updated: 2019/05/24 11:11:30 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/05/30 15:57:41 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ int		ft_strcmp(const char *s1, const char *s2)
 		s1++;
 		s2++;
 	}
-	return (s1[i] - s2[i]);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }

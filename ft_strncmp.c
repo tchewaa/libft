@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 12:35:59 by tchewa            #+#    #+#             */
-/*   Updated: 2019/05/24 13:37:32 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/05/30 16:07:34 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	if (!n)
@@ -26,5 +26,5 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 		s1++;
 		s2++;
 	}
-	return (s1[i] - s2[i]);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
