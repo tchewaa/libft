@@ -10,32 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-char	*ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int i;
-	int counter;
-	char *dest;
+	int number;
 
 	i = 0;
-	counter = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] != ' ' && str[i] != '\t')
-		{
-			dest[counter++] = str[i];
-		}
-		i++;
-	}
-	dest[counter] = '\0';
-	return (dest);
-}
+	while ((*str >= '\t' && *str <= '\r') || *str == 32)
+		str++;
 
-int		main(void)
-{
-	char str[] = "3 65";
-	printf("%s\n", ft_atoi(str));
-	return (0);
+	if (*str == '-')
+		number = -1;
+	else
+		number = 1;
+
+	if (*str == '-' || *str == '+')
+		str++;
+
+	while (*str && ft_isdigit(*str))
+		i = (i * 10) + (*str++ - '0');
+	return (i * number);
 }
