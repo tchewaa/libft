@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 09:22:53 by tchewa            #+#    #+#             */
-/*   Updated: 2019/05/31 11:00:50 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/03 17:04:32 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ char	*ft_strnstr(const char *str, const char *substr, size_t len)
 	strlen = ft_strlen(substr);
 	if (!substr)
 		return ((char *)str);
-
 	while (str[i] && (strlen + i <= len))
 	{
 		j = 0;
