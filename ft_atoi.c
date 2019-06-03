@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:27:00 by tchewa            #+#    #+#             */
-/*   Updated: 2019/05/31 16:31:49 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/03 17:03:14 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,12 @@ int	ft_atoi(const char *str)
 	i = 0;
 	while ((*str >= '\t' && *str <= '\r') || *str == 32)
 		str++;
-
 	if (*str == '-')
 		number = -1;
 	else
 		number = 1;
-
 	if (*str == '-' || *str == '+')
 		str++;
-
 	while (*str && ft_isdigit(*str))
 		i = (i * 10) + (*str++ - '0');
 	return (i * number);
