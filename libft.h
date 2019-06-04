@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:31:26 by tchewa            #+#    #+#             */
-/*   Updated: 2019/05/30 13:01:40 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/04 14:47:10 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <ctype.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <wchar.h>
+# include <locale.h> 
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -39,5 +41,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_atoi(const char *str);
 char	*ft_strdup(const char *str);
+void	ft_putchar(char c);
+void	ft_putstr(const char *str);
 
 #endif
