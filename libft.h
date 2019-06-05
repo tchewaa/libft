@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tchewa <tchewa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:31:26 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/05 14:55:24 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/05 17:54:12 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ void	ft_putendl_fd(char const *s, int fd);
 void	*ft_memset(void *b, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 
 #endif
