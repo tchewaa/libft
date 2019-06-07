@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 07:19:27 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/07 15:12:52 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/07 16:23:54 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,21 @@ size_t		ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
 	size_t i;
 	size_t j;
+	size_t space;
 	
 	i = 0;
 	j = 0;
-	
+	space = dstsize - ft_strlen(dest) - 1;
+	if(space <= ft_strlen(dest))
+		return (ft_strlen(dest) + dstsize);
 	while (i < dstsize && dest[i] != '\0')
+	{
 		i++;
-	
+	}
 	while (src[j] != '\0')
 	{
 		i++;
 		j++;
-	}		
-	return (ii);
+	}
+	return (i);
 }
