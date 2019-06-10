@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 08:31:47 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/05 08:43:13 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/10 10:45:16 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl(char const *s)
 	int i;
 
 	i = 0;
+	if (s == NULL)
+		return ;
 	while (s[i])
 	{
 		write(1, &s[i], 1);

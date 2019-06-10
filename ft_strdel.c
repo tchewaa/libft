@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 08:57:54 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/10 10:48:20 by tchewa           ###   ########.fr       */
+/*   Created: 2019/06/10 10:03:13 by tchewa            #+#    #+#             */
+/*   Updated: 2019/06/10 10:25:08 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(const char *s, int fd)
+void	ft_strdel(char **as)
 {
-	int i;
-
-	i = 0;
-	if (s == NULL)
+	if (!as)
 		return ;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
-	ft_putchar('\n');
+	free(*as);
+	*as = NULL;
 }
