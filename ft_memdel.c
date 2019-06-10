@@ -6,16 +6,18 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 06:48:32 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/10 10:22:43 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/10 14:55:30 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void	**ap)
+void		ft_memdel(void **ap)
 {
 	if (!ap)
+	{
 		return ;
+	}
 	free(*ap);
 	*ap = NULL;
 }
