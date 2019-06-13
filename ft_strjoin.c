@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 15:28:43 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/13 15:59:53 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/13 16:42:46 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,16 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-
+	size_t	len;
+	char	*str;
+	
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
+	str = (char *)malloc(len * sizeof(char));
+	if (!str)
+		return (NULL);
+	str = ft_strcpy(str, (char *)s1);
+	str = ft_strcat(str, (char *)s2);
+	return (str);
 }

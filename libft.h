@@ -6,7 +6,7 @@
 /*   By: tchewa <tchewa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:31:26 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/13 15:47:33 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/13 16:24:48 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 int			ft_strequ(char const *s1, char const *s2);
 int			ft_strnequ(char const *s1, char const *s2, size_t n);
 char		*ft_strtrim(char const *s);
-char		ft_strjoin(char const *s1, char const *s2);
+char		*ft_strjoin(char const *s1, char const *s2);
 char		**ft_strsplit(char const *s, char c);
 char		ft_itoa(int n);
 char		ft_strsub(char const *s, unsigned int start, size_t len);
