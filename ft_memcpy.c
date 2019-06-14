@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 12:49:07 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/05 15:08:42 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/14 21:51:41 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	ssrc = (unsigned char *)src;
 	sdest = (unsigned char *)dest;
 	i = 0;
-	if (ssrc == NULL && sdest == NULL)
-		return (NULL);
+	if (n == 0 || sdest == ssrc)
+		return (sdest);	
 	while (i < n)
 	{
 		sdest[i] = ssrc[i];
