@@ -6,7 +6,7 @@
 /*   By: tchewa <tchewa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:31:26 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/13 16:24:48 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/14 11:23:19 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,9 @@ int			ft_strnequ(char const *s1, char const *s2, size_t n);
 char		*ft_strtrim(char const *s);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		**ft_strsplit(char const *s, char c);
-char		ft_itoa(int n);
-char		ft_strsub(char const *s, unsigned int start, size_t len);
-char		ft_strmap(char const *s, char(*f)(char));
-char		ft_strmapi(char const *s, char(*f)(unsigned int, char));
+char		*ft_itoa(int n);
+char		*ft_strsub(char const *s, unsigned int start, size_t len);
+char		*ft_strmap(char const *s, char(*f)(char));
+char		*ft_strmapi(char const *s, char(*f)(unsigned int, char));
 
 #endif
