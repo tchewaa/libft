@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 08:57:54 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/10 10:48:20 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/14 16:43:14 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	ft_putendl_fd(const char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	ft_putchar('\n');
+	ft_putchar_fd('\n', fd);
 }
