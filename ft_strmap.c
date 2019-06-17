@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 14:09:14 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/17 14:24:39 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/17 14:46:53 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	size_t i;
-	size_t len;
-	char *str;
+	size_t		i;
+	size_t		len;
+	char		*str;
 
 	i = 0;
 	if (!s)
