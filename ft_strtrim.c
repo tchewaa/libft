@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 15:48:37 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/17 16:58:02 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/18 16:36:51 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,31 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t i;
-	char *str;
-	size_t len;
+	size_t		i;
+	size_t		j;
+	size_t		k;
+	char		*str;
 
 	i = 0;
+	j = 0;
+	k = 0;
 	if (!s)
 		return (NULL);
-	len = ft_strlen(s);
-	str = (char *)malloc(len * sizeof(char) + 1);
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		i++;
+	if (s[i] == '\0')
+		return ("");
+	j = ft_strlen(s) - 1;
+	while (s[j] == ' ' || s[j] == '\t' || s[j] == '\n')
+		j--;
+	str = (char *)malloc(sizeof(char) * (j - i) + 2);
 	if (!str)
 		return (NULL);
-	while (s[i])
+	while ((i + k) <= j)
 	{
-		if (s[i] != ' ' && s[i] != '\t' && s[i] != '\n')
-			str[i] = s[i];
-		i++;	
+		str[k] = s[i + k];
+		k++;
 	}
-	str[i] = '\0';
+	str[k] = '\0';
 	return (str);
 }
