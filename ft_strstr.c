@@ -6,33 +6,31 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 09:55:36 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/15 03:38:47 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/20 16:26:15 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *str, const char *substr)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int i;
 	int j;
 
 	i = 0;
-	if (str == NULL && substr == NULL)
-		return (NULL);
-	if (!substr)
-		return ((char *)str);
-	while (str[i] != '\0')
+	if (needle[i] == '\0')
+		return ((char*)&haystack[i]);
+	while (haystack[i] != '\0')
 	{
 		j = 0;
-		while (substr[j] != '\0')
+		while (needle[j] != '\0')
 		{
-			if (str[i + j] != substr[j])
+			if (haystack[i + j] != needle[j])
 				break ;
 			j++;
 		}
-		if (substr[j] == '\0')
-			return ((char *)str + i);
+		if (needle[j] == '\0')
+			return ((char *)haystack + i);
 		i++;
 	}
 	return (NULL);
