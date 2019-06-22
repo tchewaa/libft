@@ -6,7 +6,7 @@
 #    By: tchewa <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/30 09:51:34 by tchewa            #+#    #+#              #
-#    Updated: 2019/06/22 02:51:20 by tchewa           ###   ########.fr        #
+#    Updated: 2019/06/22 11:48:06 by tchewa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,7 @@ SRC = ft_isdigit.c \
 	  ft_isalnum.c \
 	  ft_isalpha.c \
 	  ft_isascii.c \
+	  ft_itoa.c \
 
 OBJ = *.o
 
