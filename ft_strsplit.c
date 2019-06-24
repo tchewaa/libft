@@ -6,7 +6,7 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/20 10:30:52 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/24 09:46:21 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/24 10:35:41 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ char				**ft_strsplit(char const *s, char c)
 	{
 		if (s[i] == c && s[i] != '\0')
 		{
-			str[j] = ft_strsub(s, i, count_letters(((char *)s + i), c));
+			str[j] = ft_strsub(s, i, count_letters((char*)s + i, c));
 			j++;
-			i = i + count_letters((char*)s + i + c);
+			i = i + count_letters((char*)s + i, c);
 		}
 		while (s[i] == c && s[i] != '\0')
 			i++;
