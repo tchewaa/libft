@@ -6,7 +6,7 @@
 /*   By: tchewa <tchewa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:31:26 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/14 11:23:19 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/25 12:22:49 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int			ft_isdigit(int c);
 int			ft_isprint(int c);
 char		*ft_strcat(char *dest, const char *src);
 int			ft_strcmp(const char *s1, const char *s2);
-char		*ft_strcpy(char *dest, char *src);
+char		*ft_strcpy(char *dest, const char *src);
 size_t		ft_strlen(const char *str);
 char		*ft_strncat(char *dest, const char *src, size_t n);
-char		*ft_strncpy(char *dest, char *src, size_t n);
+char		*ft_strncpy(char *dest, const char *src, size_t n);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -68,5 +68,6 @@ char		*ft_itoa(int n);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strmap(char const *s, char(*f)(char));
 char		*ft_strmapi(char const *s, char(*f)(unsigned int, char));
+size_t		ft_strlcat(char *dst, const char *src, size_t destsize);
 
 #endif
