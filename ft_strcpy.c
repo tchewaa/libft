@@ -6,13 +6,13 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:25:28 by tchewa            #+#    #+#             */
-/*   Updated: 2019/05/24 11:11:10 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/25 11:30:34 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strcpy(char *dest, char *src)
+char		*ft_strcpy(char *dest, const char *src)
 {
 	int i;
 
