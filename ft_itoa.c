@@ -6,58 +6,49 @@
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/22 10:52:01 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/22 11:47:46 by tchewa           ###   ########.fr       */
+/*   Updated: 2019/06/27 16:12:31 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	level(int n)
+static	int			level(unsigned int n)
 {
-	int		i;
-	int		count;
+	unsigned int	count;
 
 	count = 0;
-	i = 1;
-	if (n < 0)
-		n = -1 * n;
-	if (n == 0)
-		count++;
-	else if (n != 0)
+	while (n >= 10)
 	{
-		while (n / i != 0)
-		{
-			i = i * 10;
-			count++;
-		}
+		n /= 10;
+		count++;
 	}
-	return (count);
+	return (count + 1);
 }
 
-char		*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
-	char	*num;
-	int		count;
-	int		negative;
+	char			*str;
+	unsigned int	i;
+	unsigned int	size;
+	unsigned int	nb;
 
-	num = 0;
-	negative = 0;
 	if (n < 0)
-		negative = 1;
-	count = level(n);
-	if (!(num = (char *)malloc(sizeof(char) * (count + 1 + negative))))
+		nb = (unsigned int)(n * -1);
+	else
+		nb = (unsigned int)n;
+	size = (unsigned int)level(nb);
+	i = 0;
+	if (!(str = (char *)malloc(sizeof(char) * (size + 1 + (n < 0 ? 1 : 0)))))
 		return (0);
-	if (n < 0)
+	if (n < 0 && (str[i] = '-'))
+		size++;
+	i = size - 1;
+	while (nb >= 10)
 	{
-		n = -1 * n;
-		count++;
-		num[0] = '-';
+		str[i--] = (char)(nb % 10 + 48);
+		nb /= 10;
 	}
-	num[count] = '\0';
-	while (--count >= negative)
-	{
-		num[count] = '0' + (n % 10);
-		n = (n - (n % 10)) / 10;
-	}
-	return (num);
+	str[i] = (char)(nb % 10 + 48);
+	str[size] = '\0';
+	return (str);
 }
