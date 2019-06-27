@@ -5,30 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchewa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 07:19:27 by tchewa            #+#    #+#             */
-/*   Updated: 2019/06/22 02:09:48 by tchewa           ###   ########.fr       */
+/*   Created: 2019/06/27 15:00:12 by tchewa            #+#    #+#             */
+/*   Updated: 2019/06/27 15:00:23 by tchewa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *dest, const char *src, size_t dstsize)
+size_t		ft_strlcat(char *str1, const char *str2, size_t size)
 {
-	size_t		i;
-	size_t		j;
-	size_t		strlen;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
-	strlen = ft_strlen(src);
-	while (dest[i] && i < dstsize)
+	while (str1[i] && i < size)
 		i++;
-	while (src[i] && (i + j + 1) < (dstsize))
+	while (str2[j] && (i + j + 1) < size)
 	{
-		dest[i + j] = src[j];
+		str1[i + j] = str2[j];
 		j++;
 	}
-	if (i != dstsize)
-		dest[i + j] = '\0';
-	return (i + strlen);
+	if (i != size)
+		str1[i + j] = '\0';
+	return (i + ft_strlen(str2));
 }
